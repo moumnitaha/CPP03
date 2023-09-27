@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/27 17:30:27 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/27 18:28:46 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(10), _energy_poi
     std::cout << "Default name constructor called" << std::endl;
 }
 
-ClapTrap & ClapTrap::operator=(const ClapTrap &copy) {
+ClapTrap & ClapTrap::operator=(const ClapTrap & copy) {
     std::cout << "Copy assignment operator called" << std::endl;
     this->_name = copy.get_name();
     this->_hit_points = copy.get_hit_points();
@@ -52,4 +52,32 @@ int ClapTrap::get_attack_damage(void) const {
 
 ClapTrap::~ClapTrap() {
     std::cout << "Destructor called" << std::endl;
+}
+
+void ClapTrap::attack(const std::string &target) {
+    if (_energy_points <= 0 || _hit_points <= 0) return ;
+    std::cout << "ClapTrap " << _name << " attacks " << target;
+    std::cout << ", causing " << _attack_damage << " point(s) of damage!" << std::endl;
+    _energy_points--; 
+}
+
+void ClapTrap::takeDamage(unsigned int amount) {
+    if (_energy_points <= 0 || _hit_points <= 0) return ;
+    std::cout << "ClapTrap " << _name << " gets " << amount;
+    std::cout << " point(s) of damage!" << std::endl;
+    _hit_points -= amount;
+}
+
+void ClapTrap::beRepaired(unsigned int amount) {
+    if (_energy_points <= 0 || _hit_points <= 0) return ;
+    std::cout << "ClapTrap " << _name << " gets " << amount;
+    std::cout << " point(s) to get repaired!" << std::endl;
+    _hit_points += amount;
+    _energy_points--;
+}
+
+std::ostream & operator<< (std::ostream &o, const ClapTrap &c)
+{
+    o << c.get_name();
+    return o;
 }
