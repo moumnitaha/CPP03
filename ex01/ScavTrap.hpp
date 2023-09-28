@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:34 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 12:32:41 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/28 18:35:03 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ class ScavTrap : public ClapTrap {
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap & copy);
 		ScavTrap & operator=( const ScavTrap & copy);
+		void guardGate();
+		void attack(const std::string &target);
 		~ScavTrap();
 };

@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:33 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 16:56:21 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/28 18:51:41 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-    ClapTrap a;
+    ClapTrap a("::TAHA::");
     std::cout << ">>> NAME 1: " << a << " : " << a.get_energy_points() << std::endl;
     ClapTrap b(a);
     std::cout << ">>> NAME 2: " << b << " : " << b.get_energy_points() << std::endl;

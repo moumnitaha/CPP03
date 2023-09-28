@@ -6,17 +6,17 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 16:54:17 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/28 18:23:11 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("Default"), _hit_points(10), _energy_points(10), _attack_damage(0) {
+ClapTrap::ClapTrap() : _name("Default"), _hit_points(100), _energy_points(50), _attack_damage(20) {
     std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(10), _energy_points(10), _attack_damage(0) {
+ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(100), _energy_points(50), _attack_damage(20) {
     std::cout << "Default name constructor called" << std::endl;
 }
 
@@ -88,6 +88,10 @@ void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << " point(s) to get repaired!" << std::endl;
     _hit_points += amount;
     _energy_points--;
+}
+
+void ClapTrap::set_energy_points(int amount) {
+    _energy_points = amount;
 }
 
 std::ostream & operator<< (std::ostream &o, const ClapTrap &c)

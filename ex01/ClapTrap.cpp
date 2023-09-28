@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 16:52:51 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/28 18:23:11 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,10 @@ void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << " point(s) to get repaired!" << std::endl;
     _hit_points += amount;
     _energy_points--;
+}
+
+void ClapTrap::set_energy_points(int amount) {
+    _energy_points = amount;
 }
 
 std::ostream & operator<< (std::ostream &o, const ClapTrap &c)

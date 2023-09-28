@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 16:52:45 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/28 18:23:07 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class ClapTrap {
 		int get_hit_points(void) const;
 		int get_energy_points(void) const;
 		int get_attack_damage(void) const;
+		void set_energy_points(int amount);
 		~ClapTrap();
 };
 
