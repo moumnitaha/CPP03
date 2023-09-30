@@ -6,9 +6,12 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:34 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 18:35:03 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/29 18:22:57 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef _SCAVTRAP_H_
+# define _SCAVTRAP_H_
 
 #include "ClapTrap.hpp"
 
@@ -22,3 +25,5 @@ class ScavTrap : public ClapTrap {
 		void attack(const std::string &target);
 		~ScavTrap();
 };
+
+#endif

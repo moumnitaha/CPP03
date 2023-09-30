@@ -6,12 +6,12 @@
 #    By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 15:58:39 by tmoumni           #+#    #+#              #
-#    Updated: 2023/09/27 18:56:12 by tmoumni          ###   ########.fr        #
+#    Updated: 2023/09/30 15:34:01 by tmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ScavTrap
-HEADER = ScavTrap.hpp
+HEADER = ScavTrap.hpp ClapTrap.hpp
 
 FLAGS = -Wall -Wextra -Werror
 STD = -std=c++98

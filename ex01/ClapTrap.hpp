@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 18:23:07 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/30 17:30:08 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string _name;
 		int _hit_points;
 		int _energy_points;
@@ -34,7 +34,6 @@ class ClapTrap {
 		int get_hit_points(void) const;
 		int get_energy_points(void) const;
 		int get_attack_damage(void) const;
-		void set_energy_points(int amount);
 		~ClapTrap();
 };
 

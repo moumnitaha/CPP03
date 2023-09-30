@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:44 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 17:30:49 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/30 17:40:29 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 ScavTrap & ScavTrap::operator=(const ScavTrap & copy) {
     ClapTrap::operator=(copy);
-    std::cout << "Scav Copy assignemet operator called" << std::endl;
+    std::cout << "Scav Copy assignement operator called" << std::endl;
     return (*this);
 }
 

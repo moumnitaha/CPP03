@@ -6,18 +6,18 @@
 #    By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 15:58:39 by tmoumni           #+#    #+#              #
-#    Updated: 2023/09/30 15:33:30 by tmoumni          ###   ########.fr        #
+#    Updated: 2023/09/30 15:37:30 by tmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
-HEADER = FragTrap.hpp ClapTrap.hpp
+NAME = DiamondTrap
+HEADER = DiamondTrap.hpp FragTrap.hpp ScavTrap.hpp ClapTrap.hpp
 
 FLAGS = -Wall -Wextra -Werror
 STD = -std=c++98
 CC = c++
 
-SRCS = FragTrap.cpp ClapTrap.cpp main.cpp
+SRCS = DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 RM = rm -rf
 

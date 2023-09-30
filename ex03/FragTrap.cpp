@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:44 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 17:29:09 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/30 17:40:16 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 
 FragTrap & FragTrap::operator=(const FragTrap & copy) {
     ClapTrap::operator=(copy);
-    std::cout << "FragTrap Copy assignemet operator called" << std::endl;
+    std::cout << "FragTrap Copy assignement operator called" << std::endl;
     return (*this);
 }
 
