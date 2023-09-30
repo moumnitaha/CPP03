@@ -6,13 +6,14 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:26:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 18:06:10 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/30 18:23:58 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : _name("Fefualt_clap_name") {
+DiamondTrap::DiamondTrap() : ClapTrap("Defualt_clap_name") {
+    this->_name = "Default";
     std::cout << "DiamondTrap Constructer Called" << std::endl;
 }
 
@@ -43,5 +44,5 @@ void DiamondTrap::attack(const std::string &target) {
 }
 
 void DiamondTrap::whoAmI() {
-    std::cout << _name << " --- " << ClapTrap::_name << std::endl;
+    std::cout << "My name: " << _name << " & my ClapName: " << ClapTrap::_name << std::endl;
 }
