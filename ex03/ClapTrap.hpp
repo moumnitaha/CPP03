@@ -6,12 +6,12 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 17:31:52 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/04 14:01:27 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef _CLAPTRAP_HPP_
+# define _CLAPTRAP_HPP_
 
 # include <iostream>
 # include <string>
