@@ -6,18 +6,18 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/17 15:43:27 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:46:11 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : _name("Default"), _hit_points(10), _energy_points(10), _attack_damage(0) {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(10), _energy_points(10), _attack_damage(0) {
-    std::cout << "Default name constructor called" << std::endl;
+    std::cout << "ClapTrap parameterized constructor called" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator=(const ClapTrap & copy) {
@@ -53,7 +53,7 @@ int ClapTrap::get_attack_damage(void) const {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target) {

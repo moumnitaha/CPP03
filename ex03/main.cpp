@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:33 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/02 11:37:08 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:41:56 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int main(void)
 {
-    DiamondTrap me("TAHA");
-    DiamondTrap me2("Moumni");
-    DiamondTrap me3(me);
-    std::cout << "[" << me << "]" << std::endl;
-    std::cout << me.get_hit_points() << std::endl;
-    std::cout << me.get_energy_points() << std::endl;
-    me.attack("MOUMNI");
-    std::cout << me.get_hit_points() << std::endl;
-    std::cout << me.get_energy_points() << std::endl;
-    me.whoAmI();
-    me.highFivesGuys();
+    DiamondTrap dmr("<<DM-01>>");
+    
+    std::cout << "HITS: " << dmr.get_hit_points() << std::endl;
+    std::cout << "ENERGY: " << dmr.get_energy_points() << std::endl;
+    dmr.attack("[[ ENEMY-01 ]]");
+    std::cout << "ENERGY: " << dmr.get_energy_points() << std::endl;
+    dmr.takeDamage(99);
+    std::cout << "HITS: " << dmr.get_hit_points() << std::endl;
+    std::cout << "ENERGY: " << dmr.get_energy_points() << std::endl;
+    dmr.whoAmI();
+    dmr.highFivesGuys();
     return 0;
 }

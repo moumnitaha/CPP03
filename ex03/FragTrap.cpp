@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:44 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 17:40:16 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:47:20 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap() {
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
-    std::cout << "FragTrap Constructor with name called" << std::endl;
+    std::cout << "FragTrap parameterized Constructor called" << std::endl;
 }
 
 FragTrap & FragTrap::operator=(const FragTrap & copy) {

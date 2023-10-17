@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:24:48 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/04 14:01:19 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:43:01 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap  : public ScavTrap, public FragTrap {
+class DiamondTrap : public FragTrap, public ScavTrap {
 	private:
 		std::string _name;
 	public:

@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:33 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/29 18:09:32 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:33:10 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,20 @@
 
 int main(void)
 {
-    FragTrap a("<<TAHA>>");
-    FragTrap b("zzBIG Ozz");
-    FragTrap c("MOUMNI");
-    c.highFivesGuys();
-    // c = b = a;
-    std::cout << ">>> NAME 1: [ " << a << " ] ENERGYY : " << a.get_energy_points() << std::endl;
-    std::cout << ">>> NAME 2: [ " << b << " ] HITS : " << b.get_hit_points() << std::endl;
-    std::cout << ">>> NAME 3: [ " << c << " ] ENERGYY : " << a.get_energy_points() << std::endl;
-    b.attack("[[ ENEMY ]]");
-    std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
-    std::cout << "HITS: " << b.get_hit_points() << std::endl;
-    b.takeDamage(99);
-    std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
-    std::cout << "HITS: " << b.get_hit_points() << std::endl;
-    b.attack("CCCCCCCCCC");
-    b.beRepaired(1);
-    std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
-    std::cout << "HITS: " << b.get_hit_points() << std::endl;
+    FragTrap frg("<<FRG-01>>");
+    frg.attack("[[ ENEMY-01 ]]");
+    std::cout << "ENERGY: " << frg.get_energy_points() << std::endl;
+    std::cout << "HITS: " << frg.get_hit_points() << std::endl;
+    frg.beRepaired(20);
+    std::cout << "ENERGY: " << frg.get_energy_points() << std::endl;
+    std::cout << "HITS: " << frg.get_hit_points() << std::endl;
+    frg.takeDamage(199);
+    std::cout << "ENERGY: " << frg.get_energy_points() << std::endl;
+    std::cout << "HITS: " << frg.get_hit_points() << std::endl;
+    frg.attack("[[ ENEMY-01 ]]");
+    frg.beRepaired(1);
+    std::cout << "ENERGY: " << frg.get_energy_points() << std::endl;
+    std::cout << "HITS: " << frg.get_hit_points() << std::endl;
+    frg.highFivesGuys();
     return 0;
 }
