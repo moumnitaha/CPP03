@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:26:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/17 17:48:55 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 22:52:23 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ DiamondTrap::DiamondTrap() : ClapTrap("Defualt_clap_name") {
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name") {
     this->_name = name;
-    this->_hit_points = FragTrap::_hit_points;
-    this->_energy_points = ScavTrap::_energy_points;
-    this->_attack_damage = FragTrap::_attack_damage;
     std::cout << "DiamondTrap parameterized Constructer Called" << std::endl;
 }
 
