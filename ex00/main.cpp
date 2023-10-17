@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:33 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 18:51:41 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 15:44:15 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 int main(void)
 {
-    ClapTrap a("::TAHA::");
-    std::cout << ">>> NAME 1: " << a << " : " << a.get_energy_points() << std::endl;
+    ClapTrap a("CLP-01");
+    std::cout << a << " : " << a.get_energy_points() << std::endl;
+    a.attack("ENEMY-01");
     ClapTrap b(a);
-    std::cout << ">>> NAME 2: " << b << " : " << b.get_energy_points() << std::endl;
-    ClapTrap c("MOUMNI");
-    c = b = a;
-    std::cout << ">>> NAME 3: " << c << std::endl;
-    b.attack("DDDDDDD");
+    b.attack("ENEMY-01");
     std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
     std::cout << "HITS: " << b.get_hit_points() << std::endl;
-    b.takeDamage(4);
+    b.takeDamage(-4);
     std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
     std::cout << "HITS: " << b.get_hit_points() << std::endl;
-    b.beRepaired(1);
+    b.beRepaired(-100);
     std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
     std::cout << "HITS: " << b.get_hit_points() << std::endl;
     return 0;

@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:33 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/28 18:50:10 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 15:59:52 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
     b.attack("[[ ENEMY ]]");
     std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
     std::cout << "HITS: " << b.get_hit_points() << std::endl;
-    b.takeDamage(99);
+    b.takeDamage(199);
     std::cout << "ENERGY: " << b.get_energy_points() << std::endl;
     std::cout << "HITS: " << b.get_hit_points() << std::endl;
     b.attack("CCCCCCCCCC");

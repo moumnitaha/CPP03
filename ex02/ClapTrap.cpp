@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:58:16 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/30 17:29:39 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/17 16:04:07 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,26 @@ void ClapTrap::attack(const std::string &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-     if (_energy_points == 0 || _hit_points <= 0) {
+    if ((int)amount < 0) {
+        std::cout << "Error: amount is negative" << std::endl;
+        return ;
+    }
+    if (_energy_points == 0 || _hit_points <= 0) {
         if (_hit_points <= 0)
             std::cout << "ClapTrap " << _name << " is dead!" << std::endl;
         return ;
     }
     std::cout << "ClapTrap " << _name << " gets " << amount;
     std::cout << " point(s) of damage!" << std::endl;
-    _hit_points -= amount;
+    (int)amount > _hit_points ? _hit_points = 0 : _hit_points -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-     if (_energy_points == 0 || _hit_points <= 0) {
+    if ((int)amount < 0) {
+        std::cout << "Error: amount is negative" << std::endl;
+        return ;
+    }
+    if (_energy_points == 0 || _hit_points <= 0) {
         if (_hit_points <= 0)
             std::cout << "ClapTrap " << _name << " is dead!" << std::endl;
         return ;
